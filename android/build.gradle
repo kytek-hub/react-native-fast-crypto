@@ -16,7 +16,6 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    ndkVersion '21.0.6113669'
     compileSdkVersion safeExtGet('compileSdkVersion', 26)
     buildToolsVersion safeExtGet('buildToolsVersion', '26.0.3')
 
@@ -33,7 +32,6 @@ android {
         }
 
         ndk {
-            ndkVersion '21.0.6113669'
             // Specifies the ABI configurations of your native
             // libraries Gradle should build and package with your APK.
             abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
@@ -65,6 +63,6 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:+'
 }
   
